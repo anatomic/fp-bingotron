@@ -48,7 +48,7 @@ slideContent model =
         Just topic ->
             case topicContent model of
                 Nothing ->
-                    h1 [] [ text "Functional JS Bingotron" ]
+                    h1 [] [ text "@anatomic's Functional JS Bingotron" ]
 
                 Just m ->
                     Markdown.toHtml [ class "content" ] m

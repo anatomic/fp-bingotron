@@ -323,7 +323,7 @@ setoid =
     """
 # Setoid
 
-> An object that has an equals function which can be used to compare with objects of the same type
+> An object that has an `equals` function which can be used to compare with objects of the same type
 
 ```js
 a.equals(b) === true; // reflexivity
@@ -339,7 +339,7 @@ semigroup =
     """
 # Semigroup
 
-> An object that has a function which can be used to append values from other objects of the same type
+> An object that has a `concat` function which can be used to append values from other objects of the same type
 
 ```js
 const a = ["1", "2", "3"];
@@ -361,9 +361,10 @@ monoid =
 > A monoid implements `semigroup` and provides an `empty` function
 
 ```js
-Array.prototype.empty = () => [];
+Array.empty = () => [];
 
-["foo"].concat([].empty()); // ["foo"] - identity
+["foo"].concat(Array.empty()); // ["foo"] - Right identity
+Array.empty().concat(["foo"]); // ["foo"] - Left identity
 ```
 """
 
@@ -445,7 +446,9 @@ pointedFunctor =
 
 > A pointed functor is an object that implements `of`
 
-```js
+`of` takes a value and puts it in the containing data structure.
 
+```js
+Array.of(1, 2, 3) // [1, 2, 3]
 ```
 """
