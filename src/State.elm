@@ -9,79 +9,48 @@ import Random
 import Random.Set
 import Task
 import Time
-import Topics.Functor as Functor
+import Topics
 import Navigation
 
 
 topicData : Dict.Dict String String
 topicData =
     Dict.fromList
-        [ ( "Functor", Functor.content )
-        , ( "Arity", "" )
-        , ( "Currying", "" )
-        , ( "Auto Currying", "" )
-        , ( "Higher Order Function", "" )
-        , ( "Closure", "" )
-        , ( "Partial Application", "" )
-        , ( "Point-Free Style", "" )
-        , ( "Purity", "" )
-        , ( "Idempotent", "" )
-        , ( "Side Effect", "" )
-        , ( "Side Cause", "" )
-        , ( "Function Composition", "" )
-        , ( "Associativity", "" )
-        , ( "Commutativity", "" )
-        , ( "Semigroup", "" )
-        , ( "Monoid", "" )
-        , ( "Monad", "" )
-        , ( "Predicate", "" )
-        , ( "Contracts", "" )
-        , ( "Setoid", "" )
-        , ( "Lambda", "" )
-        , ( "Pointed Functor", "" )
-        , ( "Applicative Functor", "" )
-        , ( "Morphism", "" )
-        , ( "Endomorphism", "" )
-        , ( "Isomorphism", "" )
-        , ( "Referential Transparency", "" )
+        [ ( "Arity", Topics.arity )
+        , ( "Currying", Topics.currying )
+        , ( "Auto Currying", Topics.autoCurry )
+        , ( "Higher Order Function", Topics.higherOrderFunction )
+        , ( "Closure", Topics.closure )
+        , ( "Partial Application", Topics.partialApplication )
+        , ( "Point-Free Style", Topics.pointFree )
+        , ( "Purity", Topics.purity )
+        , ( "Idempotent", Topics.idempotent )
+        , ( "Side Effect", Topics.sideEffect )
+        , ( "Side Cause", Topics.sideCause )
+        , ( "Function Composition", Topics.composition )
+          -- , ( "Associativity", "" )
+          -- , ( "Commutativity", "" )
+        , ( "Setoid", Topics.setoid )
+        , ( "Semigroup", Topics.semigroup )
+        , ( "Monoid", Topics.monoid )
+        , ( "Functor", Topics.functor )
+        , ( "Foldable", Topics.foldable )
+        , ( "Monad", Topics.monad )
+        , ( "Predicate", Topics.predicate )
+          -- , ( "Contracts", "" )
+          -- , ( "Lambda", "" )
+        , ( "Pointed Functor", Topics.pointedFunctor )
+        , ( "Applicative Functor", Topics.applicativeFunctor )
+        , ( "Morphism", Topics.morphism )
+        , ( "Endomorphism", Topics.endomorphism )
+        , ( "Isomorphism", Topics.isomorphism )
+        , ( "Referential Transparency", Topics.refTrans )
         ]
 
 
 topics : Set.Set String
 topics =
     Set.fromList <| Dict.keys topicData
-
-
-
--- [ "Arity"
--- , "Currying"
--- , "Auto Currying"
--- , "Higher Order Function"
--- , "Closure"
--- , "Partial Application"
--- , "Point-Free Style"
--- , "Purity"
--- , "Idempotent"
--- , "Side Effect"
--- , "Side Cause"
--- , "Function Composition"
--- , "Associativity"
--- , "Commutativity"
--- , "Semigroup"
--- , "Monoid"
--- , "Monad"
--- , "Predicate"
--- , "Contracts"
--- , "Setoid"
--- , "Lambda"
--- , "Functor"
--- , "Pointed Functor"
--- , "Applicative Functor"
--- , "Morphism"
--- , "Endomorphism"
--- , "Isomorphism"
--- , "Referential Transparency"
--- ]
 
 
 initialModel : Model

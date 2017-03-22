@@ -21,12 +21,17 @@ topicContent model =
 root : Model -> Html Msg
 root model =
     div [ class "slide" ]
-        [ ul [ class "topics-remaining" ]
-            (List.map
-                viewTopicTitle
-             <|
-                Set.toList model.topicsToCover
-            )
+        [ case model.currentTopic of
+            Nothing ->
+                div [] []
+
+            Just t ->
+                ul [ class "topics-remaining" ]
+                    (List.map
+                        viewTopicTitle
+                     <|
+                        Set.toList model.topicsToCover
+                    )
         , div
             [ class "slide-inner" ]
             [ slideContent model
@@ -38,7 +43,7 @@ slideContent : Model -> Html msg
 slideContent model =
     case model.currentTopic of
         Nothing ->
-            img [ src "/assets/bingo.gif" ] []
+            img [ src "/bingo.gif", class "bingo" ] []
 
         Just topic ->
             case topicContent model of
