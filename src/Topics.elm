@@ -141,6 +141,12 @@ partialApplication =
     """
 # Partial Application
 
+> The process of creating a new function from an existing function but with some or all of the inputs pre-defined
+
+```js
+const add = (a, b) => a + b;
+const add5 = add.bind(null, 5);
+```
 """
 
 
