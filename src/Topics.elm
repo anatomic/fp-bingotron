@@ -398,7 +398,7 @@ monad =
     """
 # Monad
 
-> A monad is an object which implements `of` and `chain` functions - chain is like map except it lifts it's returned value out from its container
+> A monad is an object which implements `of` and `chain` functions - chain is like map except it unnests the returned value from its container
 
 Some people argue that Promises in JS are Monads. I'd say, "sort of, and close enough"
 
