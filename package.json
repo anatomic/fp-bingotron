@@ -6,13 +6,14 @@
   "author": "Ian Thomas",
   "license": "MIT",
   "dependencies": {
-    "css-loader": "^0.27.3",
-    "elm-webpack-loader": "^4.5.0",
+    "css-loader": "^3.2.0",
+    "elm": "0.18.0-exp5",
+    "elm-webpack-loader": "^6.0.0",
     "eslint": "^3.19.0",
     "file-loader": "^0.10.1",
-    "serve": "^5.2.4",
+    "serve": "^11.1.0",
     "style-loader": "^0.14.1",
-    "url-loader": "^0.5.9",
+    "url-loader": "^2.1.0",
     "webpack": "^2.7.0",
     "webpack-dev-server": "^2.11.5"
   },
