@@ -9,7 +9,6 @@
     "css-loader": "^3.2.0",
     "elm": "0.18.0-exp5",
     "elm-webpack-loader": "^6.0.0",
-    "eslint": "^3.19.0",
     "file-loader": "^0.10.1",
     "serve": "^11.1.0",
     "style-loader": "^0.14.1",
