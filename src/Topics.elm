@@ -450,7 +450,7 @@ pointedFunctor =
     """
 # Pointed Functor
 
-> A pointed functor is an object that implements `of`
+> A pointed functor is an object (Functor) that implements `of`
 
 `of` takes a value and puts it in the containing data structure.
 
