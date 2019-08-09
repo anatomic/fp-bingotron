@@ -19,6 +19,7 @@
   "scripts": {
     "start": "serve ./dist",
     "dev": "webpack-dev-server --port 3000",
-    "build": "webpack -p"
+    "deps": "elm-package install --yes",
+    "build": "npm run deps && webpack -p"
   }
 }
