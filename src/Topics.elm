@@ -221,7 +221,7 @@ sideCause =
     """
 # Side Cause
 
-> A side cause is where the value returned from a function is in same way based on state stored outside the function
+> A side cause is where the value returned from a function is in some way based on state stored outside the function
 """
 
 
